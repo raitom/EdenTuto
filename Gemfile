@@ -12,7 +12,19 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :test, :development do
+  gem 'cucumber-rails', require: false
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'database_cleaner'
+end
+
 #Gems pour tous les groupes.
 gem 'devise'
+gem 'haml'
 gem 'jquery-rails'
+gem 'localeapp'
+gem 'newrelic_rpm'
 
