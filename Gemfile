@@ -31,5 +31,7 @@ end
 gem 'devise'
 gem 'haml'
 gem 'jquery-rails'
+gem 'localeapp'
 gem 'mongoid', '>= 3.1'
+gem 'newrelic_rpm'
 
