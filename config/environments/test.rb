@@ -29,12 +29,19 @@ EdenTuto::Application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
-  # Raise exception on mass assignment protection for Active Record models
-  config.active_record.mass_assignment_sanitizer = :strict
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 
-  #Mails Devise
+  #Mails
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.edenservers.fr",
+      :port                 => 587,
+      :domain               => 'edenservers.fr',
+      :user_name            => 'support@edenservers.fr',
+      :password             => 'zamelpind',
+      :authentication       => :plain,
+      :enable_starttls_auto => true  }
 end
