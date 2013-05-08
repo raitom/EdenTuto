@@ -61,10 +61,16 @@ EdenTuto::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  # Log the query plan for queries taking more than this (works
-  # with SQLite, MySQL, and PostgreSQL)
-  # config.active_record.auto_explain_threshold_in_seconds = 0.5
-
-  #Mails Devise
+  #Mails
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.edenservers.fr",
+      :port                 => 587,
+      :domain               => 'edenservers.fr',
+      :user_name            => 'support@edenservers.fr',
+      :password             => 'zamelpind',
+      :authentication       => :plain,
+      :enable_starttls_auto => true  }
+
 end
