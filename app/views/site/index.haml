@@ -1,2 +1,5 @@
 %p
   = User.all.first.email
+%p
+  = User.first.tutocenters.first.categories.first.listeTutoriels.each do |t|
+    %p Biking
