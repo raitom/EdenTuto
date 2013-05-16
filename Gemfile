@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 
 group :assets do
@@ -25,6 +25,7 @@ end
 group :development, :test do
   gem 'factory_girl_rails', '>= 4.0.0'
   gem 'rspec-rails', '>= 2.11.0'
+  gem 'simplecov'
 end
 
 # Gems pour tous les groupes
@@ -34,4 +35,5 @@ gem 'jquery-rails'
 gem 'localeapp'
 gem 'mongoid', '>= 3.1'
 gem 'newrelic_rpm'
+gem 'zeus'
 
