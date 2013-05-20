@@ -1,0 +1,7 @@
+%aside.span3#sidebar{role: "complementary"}
+  %section.widget
+    %h3=t("tutocenter.menu")
+    %ul.menu
+      = @tutocenter.categories.each do |c|
+        %li
+          = link_to "#{c.nom}", root_path
