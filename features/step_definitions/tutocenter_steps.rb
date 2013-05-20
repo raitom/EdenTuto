@@ -5,21 +5,21 @@ Given(/^un utilisateur$/) do
 end
 
 Given(/^un tutocenter pour cet utilisateur$/) do
-  @User.tutocenters.create()
+  @User.tutocenters.create(domaine: "cucumber")
 end
 
-Given(/^une categorie pour cette utilisateur nommee "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given(/^une categorie pour cette utilisateur nommee "(.*?)"$/) do |nomCategorie|
+  @User.tutocenters.first.categories.create(nom: nomCategorie)
 end
 
 # WHEN
 
 When(/^quand je visite la page d'index du tutocenter$/) do
-  pending # express the regexp above with the code you wish you had
+  visit root_path
 end
 
 # THEN
 
-Then(/^je devrais voir affiche la categorie "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^je devrais voir afficher "(.*?)"$/) do |texte|
+  page.should have_content texte
 end

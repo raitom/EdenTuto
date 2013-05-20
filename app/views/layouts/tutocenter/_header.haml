@@ -1,0 +1,12 @@
+#page-header-container
+  .container
+    .page-header.row
+      .span8
+        %a{href: root_path}
+          %H1= @tutocenter.nom
+        %p.tagline= @tutocenter.sousTitre
+      .span4
+        %form{role: "search", id: "searchform", class: "form-search"}
+          %label{class: 'hide', for: "s"}
+            Search for:
+          %input{type: "text", name: "s", id: "autocomplete-dynamic", class: "searchajax search-query span4", autocomplete: "off", placeholder: "Test"}

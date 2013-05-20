@@ -8,5 +8,5 @@ Feature: Affichage de la liste des categories
       Given un tutocenter pour cet utilisateur
       Given une categorie pour cette utilisateur nommee "minecraft"
     When quand je visite la page d'index du tutocenter
-    Then je devrais voir affiche la categorie "minecraft"
+    Then je devrais voir afficher "minecraft"
 
