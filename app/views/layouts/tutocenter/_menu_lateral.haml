@@ -5,3 +5,9 @@
       - @tutocenter.categories.each do |c|
         %li
           = link_to "#{c.nom}", root_path
+  %section.widget
+    %h3=t("tutocenter.dernierTuto")
+    %ul.menu
+      - Tutoriel.order_by("created_at DESC").limit(5).each do |t|
+        %li
+          = link_to "#{t.titre}", root_path

@@ -6,7 +6,7 @@
           %a{href: "#", title: c.nom}
             = c.nom
         %ul.categorie-posts
-          - c.tutoriels.each do |t|
+          - c.tutoriels.order_by("created_at DESC").limit(5).each do |t|
             %li
               %a{href: "#"}
                 =t.titre

@@ -201,5 +201,7 @@ fr:
   tutocenter:
     accueil:
       voir: Voir les
+    dernierTuto: "Nouveaux tutoriels"
     menu: Menu
+    rechercher: Rechercher un tutoriel
     tutoriels: tutoriels

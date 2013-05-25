@@ -1,5 +1,6 @@
 class Tutoriel
   include Mongoid::Document
+  include Mongoid::Timestamps
 
   field :titre, type: String
   field :contenu, type: String
