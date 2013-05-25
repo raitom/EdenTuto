@@ -199,4 +199,7 @@ fr:
       short: ! '%d %b %H:%M'
     pm: pm
   tutocenter:
+    accueil:
+      voir: Voir les
     menu: Menu
+    tutoriels: tutoriels

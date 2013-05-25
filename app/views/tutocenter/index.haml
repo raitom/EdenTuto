@@ -1,0 +1,15 @@
+#main.knowledge-base.span9{role: "main"}
+  .row.knowledge-base-row
+    - @tutocenter.categories.each do |c|
+      .span3
+        %h2
+          %a{href: "#", title: c.nom}
+            = c.nom
+        %ul.categorie-posts
+          - c.tutoriels.each do |t|
+            %li
+              %a{href: "#"}
+                =t.titre
+        %span.label.label-color
+          %a{href: "#", title: ""}
+            = "" + t("tutocenter.accueil.voir") + " #{c.tutoriels.count} " + t("tutocenter.tutoriels")
