@@ -7,8 +7,8 @@
             = c.nom
         %ul.categorie-posts
           - c.tutoriels.order_by("created_at DESC").limit(5).each do |t|
-            %li
-              %a{href: "#"}
+            %li.tutoriel_link
+              %a{href: "/#{t.slug}"}
                 =t.titre
         %span.label.label-color
           %a{href: "#", title: ""}

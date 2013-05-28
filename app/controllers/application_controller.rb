@@ -6,4 +6,5 @@ class ApplicationController < ActionController::Base
   def tutocenter
     @tutocenter = User.all.first.tutocenters.first
   end
+
 end

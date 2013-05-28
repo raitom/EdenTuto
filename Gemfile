@@ -34,6 +34,7 @@ gem 'haml'
 gem 'jquery-rails'
 gem 'localeapp'
 gem 'mongoid', '>= 3.1'
+gem 'mongoid_slug'
 gem 'newrelic_rpm'
 gem 'zeus'
 
